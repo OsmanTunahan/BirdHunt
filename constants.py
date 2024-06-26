@@ -1,0 +1,11 @@
+WIDTH = 1067
+HEIGHT = 600
+WHITE = (255, 255, 255)
+FONT_COLOR = (255, 255, 255)
+BG_IMAGE_PATH = "img/background.png"
+DOG_IMAGE_PATH = "img/dog.png"
+CHICKEN_IMAGE_PATH = "img/chicken.png"
+CROSSHAIR_IMAGE_PATH = "img/crosshair.png"
+AMMO_IMAGES_PATHS = ["img/ammo0.png", "img/ammo1.png", "img/ammo2.png", "img/ammo3.png", "img/ammo4.png"]
+SHOT_SOUND_PATH = "sound/shot.mp3"
+RELOAD_SOUND_PATH = "sound/reload.mp3"
