@@ -76,6 +76,19 @@ class Ammo:
     def start_reload(self):
         self.reload_started = True
 
+class SoundManager:
+    def __init__(self, shot_path, reload_path):
+        self.shot = pygame.mixer.Sound(shot_path)
+        self.shot.set_volume(0.5)
+        self.reload = pygame.mixer.Sound(reload_path)
+        self.reload.set_volume(0.5)
+
+    def play_shot(self):
+        self.shot.play()
+
+    def play_reload(self):
+        self.reload.play()
+
 class Game:
     def __init__(self):
         pygame.init()
@@ -91,6 +104,7 @@ class Game:
         self.bird = Bird(random.randint(50, WIDTH - 50), random.randint(50, HEIGHT - 50))
         self.crosshair = Crosshair(CROSSHAIR_IMAGE_PATH, WIDTH / 2, HEIGHT / 2)
         self.ammo = Ammo([pygame.image.load(path).convert_alpha() for path in AMMO_IMAGES_PATHS])
+        self.sound_manager = SoundManager(SHOT_SOUND_PATH, RELOAD_SOUND_PATH)
         self.font = pygame.font.SysFont('arial', 30, bold=True, italic=False)
         self.update_text()
     
