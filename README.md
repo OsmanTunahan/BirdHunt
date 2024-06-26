@@ -37,7 +37,7 @@ Bird Hunting is a simple shooting game developed in Python using Pygame library.
 - Run the game:
 
   ```bash
-  python main.py
+  python game.py
   ```
 
 - Use your mouse to move the crosshair.
